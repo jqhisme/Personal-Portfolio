@@ -78,7 +78,8 @@
         "showcases":[],
         "type":"research",
         "time":"Summer 2025",
-        "image":"assets/thumbnails/intent-prism.webp"
+        "image":"assets/thumbnails/intent-prism.webp",
+        "link":"https://github.com/jiaqi-xiao/MagicPocket"
     },
     {
         "id":10,
@@ -87,7 +88,8 @@
         "showcases":[],
         "type":"research",
         "time":"Fall 2024",
-        "image":"assets/thumbnails/llm-steering-with-limited-reference.webp"
+        "image":"assets/thumbnails/llm-steering-with-limited-reference.webp",
+        "link":"https://github.com/jqhisme/LLM-Steering-with-Limited-User-Reference-Text"
     },
     {
         "id":11,
@@ -96,7 +98,8 @@
         "showcases":[],
         "type":"research",
         "time":"Fall 2025",
-        "image":"assets/thumbnails/lecamera.webp"
+        "image":"assets/thumbnails/lecamera.webp",
+        "link":"https://github.com/jqhisme/LeCamera"
     },
     {
         "id":12,
@@ -105,6 +108,7 @@
         "showcases":[],
         "type":"research",
         "time":"Spring 2023",
-        "image":"assets/thumbnails/tour-planning-via-reinforcement-learning.webp"
+        "image":"assets/thumbnails/tour-planning-via-reinforcement-learning.webp",
+        "link":"https://github.com/Hiroki39/DS-GA-3001-007-Final-Project"
     }
 ]

@@ -8,8 +8,10 @@ function createProjectGrid(projects) {
         card.time = project.time; // store project time for potential future use
         card.showcases = project.showcases; // store project showcases for potential future use
         const slug = project.title.toLowerCase().replace(/ /g, '-');
+        const href = project.link ?? `/works/${slug}.html`;
+        const target = project.link ? 'target="_blank" rel="noopener noreferrer"' : '';
         card.innerHTML = `
-        <a href="/works/${slug}.html" class="project-card-link">
+        <a href="${href}" class="project-card-link" ${target}>
             <div class="project-image-wrapper">
                 <img src="${project.image}" alt="${project.title}">
                 <div class="project-overlay">
