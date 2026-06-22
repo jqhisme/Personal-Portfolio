@@ -1,0 +1,110 @@
+[
+    {
+        "id":1,
+        "title":"Odyssey",
+        "subtitle":"Cinema as a Navigable Space with Machine Learning",
+        "showcases":["ITP Thesis 2026","NYC Resistor Peripheral Show"],
+        "type":"media",
+        "time":"Spring 2026",
+        "image":"assets/thumbnails/odyssey.webp"
+    },
+    {
+        "id":2,
+        "title":"Tape Traverse",
+        "subtitle":"Interplay between Sound and Rotation",
+        "showcases":["Open Hardware Summit 2026","ITP NIME Show 2025","Omnicron Innovation Showcase"],
+        "type":"media",
+        "time":"Fall 2025",
+        "image":"assets/thumbnails/tape-traverse.webp"
+    },
+    {
+        "id":3,
+        "title":"Drip Feed",
+        "subtitle":"Time as Remedy",
+        "showcases":["Complication Group Show"],
+        "type":"media",
+        "time":"Fall 2025",
+        "image":"assets/thumbnails/drip-feed.webp"
+    },
+    {
+        "id":4,
+        "title":"Non Aquarium",
+        "subtitle":"Sonify Jellyfish",
+        "showcases":["NY Tech Week 2026","NYU Music Tech Open House"],
+        "type":"media",
+        "time":"Spring 2025",
+        "image":"assets/thumbnails/non-aquarium.webp"
+    },
+    {
+        "id":5,
+        "title":"Of Other (Latent) Space",
+        "subtitle":"Latent Space in StyleGAN Juxtaposting the Reality",
+        "showcases":["ITP Spring Show 2025"],
+        "type":"media",
+        "time":"Spring 2025",
+        "image":"assets/thumbnails/of-other-latent-space.webp"
+    },
+    {
+        "id":6,
+        "title":"Someone Here is Angry",
+        "subtitle":"Your AI Cooling Buddy",
+        "showcases":[],
+        "type":"media",
+        "time":"Spring 2026",
+        "image":"assets/thumbnails/someone-here-is-angry.webp"
+    },
+    {
+        "id":7,
+        "title":"Round Table",
+        "subtitle":"AI Generated Collage for Chinese Round Table Ritual",
+        "showcases":["Best Sound Nominee, MIT AI Film Hackathon 2025","Artiver AI Art Award 2025","Prompt Magazine Issue 16"],
+        "type":"media",
+        "time":"Spring 2025",
+        "image":"assets/thumbnails/round-table.webp"
+    },
+    {
+        "id":8,
+        "title":"Universe Memorial",
+        "subtitle":"Experimental Animation for Nothingness",
+        "showcases":[],
+        "type":"media",
+        "time":"Fall 2021",
+        "image":"assets/thumbnails/universe-memorial.webp"
+    },
+    {
+        "id":9,
+        "title":"Intent Prism",
+        "subtitle":"LLM Powered Intent Based Interface for Information Forging",
+        "showcases":[],
+        "type":"research",
+        "time":"Summer 2025",
+        "image":"assets/thumbnails/intent-prism.webp"
+    },
+    {
+        "id":10,
+        "title":"LLM Steering with Limited Reference",
+        "subtitle":"Research on Steering LLMs with limited reference examples",
+        "showcases":[],
+        "type":"research",
+        "time":"Fall 2024",
+        "image":"assets/thumbnails/llm-steering-with-limited-reference.webp"
+    },
+    {
+        "id":11,
+        "title":"LeCamera",
+        "subtitle":"Dynamic Human Tracking with Low Cost Robotics Arms",
+        "showcases":[],
+        "type":"research",
+        "time":"Fall 2025",
+        "image":"assets/thumbnails/lecamera.webp"
+    },
+    {
+        "id":12,
+        "title":"Tour Planning via Reinforcement Learning",
+        "subtitle":"Next Action Prediction in Disney World",
+        "showcases":[],
+        "type":"research",
+        "time":"Spring 2023",
+        "image":"assets/thumbnails/tour-planning-via-reinforcement-learning.webp"
+    }
+]

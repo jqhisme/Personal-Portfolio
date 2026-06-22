@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaching — Christoff Qihan Jiang</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/leftBar.css">
+  <link rel="stylesheet" href="css/teaching.css">
+  <script src="js/generateBackground.js"></script>
+</head>
+<body class="teaching-page">
+
+  <div id="nav"></div>
+  <script src="js/nav.js"></script>
+
+  <div class="main-container">
+
+    <script src="js/leftBar.js"></script>
+    <script>
+      const sections = ['Lecturer', 'Teaching Assistant', 'Guest Speaker', 'Seminar Instructor'];
+      document.querySelector('.main-container').prepend(createLeftBar(sections));
+    </script>
+    
+
+    <div class="teaching-container">
+
+    <div class="teaching-figure-container">
+      <img src="assets/teaching/hlab.webp" alt="HLAB Image">
+    </div>
+
+    <!-- Lecturer -->
+    <section class="teaching-section">
+      <h1 class="section-label">Lecturer</h1>
+
+      <div class="teaching-entry">
+        <div class="entry-body">
+          <div class="entry-role">Adjunct Lecturer  / Upcoming</div>
+          <div class="entry-school">NYU Interactive Media Arts</div>
+          <div class="entry-course">IMNY-UT 220 Topics in Computation and Data: Shared Minds</div>
+        </div>
+        <div class="entry-date">Spring 2027</div>
+      </div>
+
+      <div class="teaching-entry">
+        <div class="entry-body">
+          <div class="entry-role">Adjunct Lecturer</div>
+          <div class="entry-school">NYU Center for Data Science</div>
+          <div class="entry-course">DS-UA 202 Responsible Data Science Lab</div>
+          <div class="entry-links">
+            <a href="google.com">Teaching Evaluation</a>
+          </div>
+        </div>
+        <div class="entry-date">Spring 2026</div>
+      </div>
+    </section>
+
+    <!-- Teaching Assistant -->
+    <section class="teaching-section">
+      <h1 class="section-label">Teaching Assistant</h1>
+
+      <div class="teaching-entry">
+        <div class="entry-body">
+          <div class="entry-course">IMNY-UT 220 Shared Minds</div>
+          <div class="entry-school">NYU Tisch ITP/IMA</div>
+          <div class="entry-instructor">Course instructed by Dan O'Sullivan</div>
+        </div>
+        <div class="entry-date">Spring 2026</div>
+      </div>
+
+      <div class="teaching-entry">
+        <div class="entry-body">
+          <div class="entry-course">IMNY-UT 285 Real Time Media</div>
+          <div class="entry-school">NYU Tisch ITP/IMA</div>
+          <div class="entry-instructor">Course instructed by Carrie Sijia Wang</div>
+        </div>
+        <div class="entry-date">Fall 2025</div>
+      </div>
+
+      <div class="teaching-entry">
+        <div class="entry-body">
+          <div class="entry-course">IMNY-UT 260 Video Art</div>
+          <div class="entry-school">NYU Tisch ITP/IMA</div>
+          <div class="entry-instructor">Course instructed by Motomichi Nakamura</div>
+        </div>
+        <div class="entry-date">Fall 2025</div>
+      </div>
+    </section>
+
+    <!-- Guest Speaker -->
+    <section class="teaching-section">
+      <h1 class="section-label">Guest Speaker</h1>
+
+      <div class="teaching-entry">
+        <div class="entry-body">
+          <div class="entry-role">Learning About AI and Learning about Myself</div>
+          <div class="entry-school">NYU Tandon IDM, DM-UY 2173 Motion Graphics Studio, instructed by Dakota Gearhart</div>
+          <div class="entry-links"><a href="#">Link to Slides</a></div>
+        </div>
+        <div class="entry-date">Nov 2025</div>
+      </div>
+
+      <div class="teaching-entry">
+        <div class="entry-body">
+          <div class="entry-role">Neural Audio Workshop: Sound Discovery with Machine Learning in Max</div>
+          <div class="entry-school">NYU Tisch ITP/IMA, IMNY-UT 285 Real Time Media, instructed by Carrie Sijia Wang</div>
+        </div>
+        <div class="entry-date">Oct 2025</div>
+      </div>
+
+      <div class="teaching-entry">
+        <div class="entry-body">
+          <div class="entry-role">Generative Machines</div>
+          <div class="entry-school">HLAB Liberal Arts HUT, cohosted with US Embassy in Japan</div>
+          <div class="entry-links"><a href="#">Link to Slides</a></div>
+        </div>
+        <div class="entry-date">Apr 2024</div>
+      </div>
+    </section>
+
+    <!-- Seminar Instructor -->
+    <section class="teaching-section">
+      <h1 class="section-label">Seminar Instructor</h1>
+
+      <div class="teaching-entry">
+        <div class="entry-body">
+          <div class="entry-role">Teaching Signals How to Dance</div>
+          <div class="entry-school">HLAB Summer School Ehime</div>
+        </div>
+        <div class="entry-date">Aug 2024</div>
+      </div>
+
+      <div class="teaching-entry">
+        <div class="entry-body">
+          <div class="entry-role">Machine Learning for Images</div>
+          <div class="entry-school">HLAB Summer School Tokyo</div>
+        </div>
+        <div class="entry-date">Aug 2023</div>
+      </div>
+    </section>
+
+    </div>
+  </div>
+
+  <script src="js/worksContentFadeIn.js"></script>
+  <script>
+    animateFadeIn(document.querySelectorAll('.teaching-section'), 0.15);
+  </script>
+</body>
+</html>

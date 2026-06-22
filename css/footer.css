@@ -1,0 +1,33 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5% 4.5rem 5%;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 4rem;
+}
+
+.footer-back {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-back:hover {
+  opacity: 0.5;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.footer-socials a {
+  font-size: 1.2rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-socials a:hover {
+  opacity: 0.5;
+}

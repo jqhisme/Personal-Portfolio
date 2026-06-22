@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
+  <title>Christoff Qihan Jiang</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/leftBar.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <script src="js/generateBackground.js"></script>
+</head>
+<body>
+<!--   
+  <script src="js/cursor.js"></script>
+  -->
+
+  <!-- add navigation bar-->
+  <div id="nav"></div>  
+  <script src="js/nav.js"></script>
+
+  <!-- Filter bar and project grid container -->
+  <div class="main-container">
+    
+  <script src= "js/leftBar.js"></script>
+    <aside class="left-bar">
+      <h2 class="left-title">Filter Projects by</h2>
+      <button class="left-btn">All</button>
+      <button class="left-btn">Media</button>
+      <button class="left-btn">Research</button>
+    </aside>
+
+    <!-- Create grid for all projects -->
+    <div id="project-grid-container"></div>
+  </div>
+
+  <script src="js/createProjectGrid.js"></script>
+</body>
+</html>

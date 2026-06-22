@@ -1,0 +1,10 @@
+# Deployment tooling — not needed on Vercel
+deployment-utils/
+
+# System generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/

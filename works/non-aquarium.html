@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Non Aquarium</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/leftBar.css">
+  <link rel="stylesheet" href="../css/works/works-base.css">
+  <link rel="stylesheet" href="../css/works/non-aquarium.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <script src="../js/generateBackground.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="work-page">
+  <div id="nav"></div>
+  <script src="../js/nav.js"></script>
+
+  <div class="main-container">
+
+    <!-- Left bar -->
+    <script src="../js/leftBar.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('.main-container').prepend(createLeftBar());
+      });
+    </script>
+
+    <div class="works-content">
+
+      <!-- Banner -->
+      <div class="banner-container">
+        <img src="../assets/works/non-aquarium/banner.webp" alt="Non Aquarium Banner" class="banner">
+      </div>
+
+      <!-- Project brief -->
+      <script src="../js/generateProjectBrief.js"></script>
+      <script src="../js/worksContentFadeIn.js"></script>
+      <script>
+        (async () => {
+          await generateProjectBrief(
+            "Non Aquarium",
+            `Non Aquarium is a real-time media system that sonifies jellyfish movement from the Monterey Bay Aquarium livestream. The system quantifies the jellyfish's motion into data, which drives note generation and modulation of audio parameters. Through this transduction process, the organic movement of jellyfish becomes an endless generative composition.`,
+            `Non Aquarium was showcased at Bring Your Own Data (BYOD) during New York Tech Week 2026, hosted by a16z.`,
+            ["Max/MSP/Jitter", "OBS", "JavaScript"],
+            ["Data Sonification", "System Design"],
+            ["Individual Project, Composer"],
+            [
+              `Livestream data from <a href="https://www.youtube.com/watch?v=m1XcdxjVGos" target="_blank">Live Jelly Cam</a> by Monterey Bay Aquarium`,
+              "Created as part of a class taught by Briggan Krauss, Spring 2025",
+              "Special thanks to Octavio Figueroa Moya for sound design support"
+            ]
+          );
+          animateFadeIn(document.querySelector('.works-content')?.children ?? [], 0.15);
+        })();
+      </script>
+
+      <div class="content-container">
+
+        <!-- Main demo video -->
+        <figure class="content-figure-container">
+          <video controls loop playsinline>
+            <source src="../assets/works/non-aquarium/banner.mp4" type="video/mp4">
+          </video>
+          <figcaption>Please turn on the sound for the full experience.</figcaption>
+        </figure>
+
+        <figure class="content-figure-container">
+          <img src="../assets/works/non-aquarium/all-max-patch.webp" alt="Complete Max Patch">
+        </figure>
+
+
+        <!-- Design and Research -->
+        <h1 class="content-title">Design and Research</h1>
+
+        <p class="call-out">Guiding Framework</p>
+        <ul>
+          <li>What data can be extracted to encapsulate the key characteristics of the subject we want to sonify?</li>
+          <li>What kind of sound is consistent with our perception of the subject — and what are its defining characteristics: harmony, timbre, amplitude, melody?</li>
+          <li>How does the data-to-sound transduction process deepen our perception of both the subject and the data?</li>
+        </ul>
+
+        <p class="work-content">
+          We don't perceive data directly — we understand images, sound, and texture, and form spontaneous responses from them. Non Aquarium uses data solely as a bridge, augmenting perception through transduction while exploring synesthesia: the synergistic effect of experiencing cohesive sound and visuals together.
+        </p>
+
+        <p class="work-content">
+          I studied existing data sonification projects to understand how artists and researchers approach these questions. Tom Hamilton's album <a href="https://open.spotify.com/album/30EMHiZbvjcppr6TZ4YARv" target="_blank">London Fix</a> sonifies the London Stock Exchange using clean sine waves — pitch changes with the price of gold, so rapid fluctuations produce audible leaps that augment our perception of market volatility. <a href="https://direct.mit.edu/lmj/article-abstract/doi/10.1162/096112104322750755/63365/The-Music-of-the-Sphere-An-Investigation-into?redirectedFrom=fulltext" target="_blank">David First</a> transposed the Schumann resonance upward for live performance. Though its original frequency was inaudible, listeners can still perceive its relationships with other sounds in the composition.
+        </p>
+
+
+        <!-- Production -->
+        <h1 class="content-title">Production</h1>
+
+        <p class="work-content">
+          The first step was tracking jellyfish movement. Because the camera position is fixed, the only moving elements in the feed are the jellyfish. I used BLOB detection from the cv.jit library for real-time computation with minimal latency. This returns the x/y coordinates and area of each detected blob, along with the total blob count.
+        </p>
+
+        <div class="fig-grid fig-grid-2">
+          <figure class="content-figure-container">
+            <img src="../assets/works/non-aquarium/jellyfish-blob.webp" alt="Jellyfish BLOB Detection">
+          </figure>
+          <figure class="content-figure-container">
+            <img src="../assets/works/non-aquarium/max-blob.webp" alt="Max BLOB Patch">
+          </figure>
+        </div>
+
+        <p class="work-content">
+          Designing the sound is the most critical part of this project — specifically, how to map detected data onto the characteristics of sound. The overall logic is shown below.
+        </p>
+
+        <figure class="content-figure-container fig-half">
+          <img src="../assets/works/non-aquarium/sound-design.webp" alt="Sound Design Diagram">
+        </figure>
+
+        <p class="call-out">Note Triggering</p>
+
+        <p class="work-content">
+          To achieve a mesmerizing, serene aesthetic, I layered a waveform synth with a noise generator and applied filters. A constant metro drives the sound generation module.
+        </p>
+        <p class="work-content">
+          Many blobs are detected even after filtering, but human ears cannot process so many simultaneous notes. Only the first 5 blobs trigger notes, played in an arpeggiated manner so listeners can follow individual notes rather than getting lost in dense chords. The arpeggiation also creates a flow that mirrors the jellyfish's organic movement.
+        </p>
+
+        <p class="call-out">Pitch, Scale, and Velocity</p>
+
+        <p class="work-content">
+          Pitch and scale are the key elements that give the composition its melodic character. The melody should shift scales and notes gradually — dynamic but never perceived as chaotic.
+        </p>
+        <p class="work-content">
+          The composition technique draws from the circle of fifths, which felt most natural here. Viewers don't perceive the raw x/y coordinates of the jellyfish, but rather the distance between each jellyfish and the camera center — a circular spatial structure that maps intuitively to the circle of fifths. As jellyfish swim smoothly, crossing different regions maps naturally to scale transitions.
+        </p>
+
+        <figure class="content-figure-container fig-half">
+          <img src="../assets/works/non-aquarium/sound-1.webp" alt="Circle of Fifths">
+        </figure>
+
+        <figure class="content-figure-container">
+          <video controls loop playsinline>
+            <source src="../assets/works/non-aquarium/sound-2.mp4" type="video/mp4">
+          </video>
+          <figcaption>Note triggering demonstration.</figcaption>
+        </figure>
+
+        <p class="work-content">
+          One challenge: jellyfish swim quite fast, potentially jumping from C to G♭ in a short span and creating dissonant transitions. With input from Octavio Figueroa Moya, I decided to use only the upper arc of the cycle. This reduces the frequency of transitions, and moving between E♭ and A produces a pleasantly jazzy quality.
+        </p>
+        <p class="work-content">
+          With this, the complete sound generation logic is: distance d from each blob to the center determines pitch; blob size determines velocity. For each blob, I compute a vector from the video center — the sum of all vectors selects a scale using the truncated circle of fifths, and all notes are quantized to that scale. This involves several JavaScript modules and trigonometric calculations.
+        </p>
+
+        <figure class="content-figure-container fig-half">
+          <img src="../assets/works/non-aquarium/sound-3.webp" alt="JavaScript Calculation">
+        </figure>
+
+        <p class="call-out">Additional Sound Effects</p>
+
+        <p class="work-content">
+          Reverb, delay, and spectral delay add complexity and layering. Delay follows an intuitive logic: more jellyfish means more delay layers, so delay amount is modulated by blob array length. Spectral delay further shapes the texture by transforming the frequency content of each delayed signal. The complete effects chain is shown on the right.
+        </p>
+
+        <figure class="content-figure-container fig-half">
+          <img src="../assets/works/non-aquarium/sound-4.webp" alt="Sound Effect Chain">
+        </figure>
+
+        <p class="work-content">
+          Visual design elements are also incorporated to create a cohesive audiovisual experience.
+        </p>
+
+        
+        <figure class="content-figure-container fig-half" >
+          <img src="../assets/works/non-aquarium/visual-1.webp" alt="Visual Palettes">
+        </figure>
+        <figure class="content-figure-container fig-half">
+          <img src="../assets/works/non-aquarium/visual-2.webp" alt="Visual Max Patch">
+        </figure>
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="../js/footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+/* fig-grid-1: portrait left spanning 2 rows, 2 landscape stacked right */
+.fig-grid-1 {
+    grid-template-columns: 5fr 5fr;
+    grid-template-rows: auto auto;
+}
+.fig-grid-1 .content-figure-container:first-child {
+    grid-row: 1 / 3;
+    aspect-ratio: 3 / 4;
+}
+.fig-grid-1 .content-figure-container:not(:first-child) {
+    aspect-ratio: 16 / 9;
+}
+
+
+
+/* fig-grid-2: 2 portrait video columns */
+.fig-grid-2 {
+    grid-template-columns: 1fr 1fr;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.fig-grid-2 .content-figure-container {
+    aspect-ratio: 9 / 16;
+}
+.fig-grid-2 .content-figure-container video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.website-embed {
+    width: 100%;
+    height: 600px;
+    border: none;
+}

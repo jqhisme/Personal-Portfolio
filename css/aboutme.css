@@ -1,0 +1,65 @@
+.about-me-container {
+    display: flex;
+    padding: 0 0 0 5%;
+    gap: 40px;
+    height: calc(100vh - 5rem);
+    overflow: hidden;
+}
+
+.about-me-container .left {
+    width: 40%;
+    padding: 3rem 0 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-me-container .right {
+    width: 60%;
+    padding: 1%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#profile-image {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: calc(100vh - 5rem);
+}
+
+.about-me-container .right figcaption {
+    align-self: center;
+    text-align: center;
+}
+
+figure.right {
+    position: relative;
+}
+
+#zoom-lens {
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    background-image: radial-gradient(circle, rgba(70, 130, 220, 0.5) 0.5px, transparent 0.5px);
+    background-size: 3px 3px;
+    z-index: 10;
+}
+
+#zoom-overlay {
+    position: absolute;
+    display: none;
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+.about-me-container a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.about-me-container a:hover {
+  opacity: 0.5;
+}

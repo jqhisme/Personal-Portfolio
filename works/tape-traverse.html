@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tape Traverse</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/leftBar.css">
+  <link rel="stylesheet" href="../css/works/works-base.css">
+  <link rel="stylesheet" href="../css/works/tape-traverse.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <script src="../js/generateBackground.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="work-page">
+  <div id="nav"></div>
+  <script src="../js/nav.js"></script>
+
+  <div class="main-container">
+
+    <!-- Left bar -->
+    <script src="../js/leftBar.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('.main-container').prepend(createLeftBar());
+      });
+    </script>
+
+    <div class="works-content">
+
+      <!-- Banner -->
+      <div class="banner-container">
+        <img src="../assets/thumbnails/tape-traverse.webp" alt="Main Image" class="banner">
+      </div>
+
+      <!-- Project brief (injected by JS before .content-container) -->
+      <script src="../js/generateProjectBrief.js"></script>
+      <script src="../js/worksContentFadeIn.js"></script>
+      <script>
+        // Input format for the generateProjectBritef function: (Name(str), Description(str), Awards(str), Tools(arr), Tags(arr), Roles(arr), Acknowledgements(arr))
+        (async () => {
+          await generateProjectBrief(
+            "Tape Traverse",
+            `Tape Traverse is an electric musical instrument built using cassette tape players, tape loops, and analog circuits.
+            Through its component's physical movement when playing it, Tape Traverse explores the interplay between sound and rotation.`,
+            `Tape Traverse was performed at the ITP NIME Show 2025, showcased at the NYU ITP Winter Show 2025 and Omnicon Innovation Fair 2026, and nominated at Open Hardware Summit 2026.`,
+            ["Cassette Tape Players", "Adobe Illustrator", "Laser Cutting", "Ableton Live"],
+            ["Music", "Physical Computing", "Performance"],
+            ["Individual Project, Performer"],
+            [
+              "Vivian Jia and Ian Cox for Fabrication Support",
+              "Astro Lee for Performance Photography",
+              "This Project is part of the New Interfaces for Musical Expression class taught by David Rios in 2025.",
+              "Special thanks to Octavio Figueroa Moya"
+            ]
+          );
+          animateFadeIn(document.querySelector('.works-content')?.children ?? [], 0.15);
+        })();
+      </script>
+
+      <div class="content-container">
+
+        <!-- Display Counter -->
+        <div class="display-counter">
+          <div class="fig-grid fig-grid-1">
+            <figure class="content-figure-container">
+              <img src="../assets/works/tape-traverse/docimg-1.webp" alt="">
+            </figure>
+            <figure class="content-figure-container">
+              <img src="../assets/works/tape-traverse/docimg-2.webp" alt="">
+            </figure>
+            <figure class="content-figure-container">
+              <img src="../assets/works/tape-traverse/docimg-3.webp" alt="">
+            </figure>
+          </div>
+        </div>
+        <figure class="content-figure-container fig-full">
+          <img src="../assets/works/tape-traverse/docimg-4.webp" alt="">
+        </figure>
+
+        <!-- Design and Motivation -->
+        <h1 class="content-title">Design and Motivation</h1>
+
+        <p class="call-out">Concept: Interplay of Rotation and Sound</p>
+        <ul>
+          <li>Rotation is somehow harmonic.</li>
+          <li>Music is making linear stuff into rotating stuff</li>
+          <li>Rotating along a circle's circumference creates a sine wave</li>
+          <li>A motor is rotating inside a cassette tape player</li>
+        </ul>
+        <p class="work-content">
+          The inspiration of Tape Traverse stems from two concepts: rotation and travel. Rotating along a circle gives us a sine wave, looping various audio clips creates dynamic compositions, and repeating a kick drum sound at a high frequency yields a synth-like tone. While rotation is inherently cyclic, it is the process that bridges this rotational property with the linear structure of music we listen to everyday. Imagine a point travelling along a circle cyclically, and at the same time generating a tone that we perceive in a time-based manner.
+        </p>
+        <p class="work-content">
+          Tape Traverse explores using hardware and the physical movements they enable to embody the concepts of rotation and travel in sound. Performers see the tape traveling of the cassette tape moving from one side to the other when making sound. They will also see the spinning of the disk when turning on tremolo using knobs. The instrument's sound qualities, pitch and amplitude modulations, are all embodied by the qualities of the hardware-enabled physical movements.
+        </p>
+
+        <p class="call-out">Goal: Making Visible Rotations</p>
+        <figure class="content-figure-container fig-wide">
+          <img src="../assets/works/tape-traverse/inspirations.webp" alt="Inspirations">
+          <figcaption>Inspirations — New Instruments with Visible Rotations</figcaption>
+        </figure>
+
+        <p class="work-content">
+          To clearly show the physical movements of the hardware, making the instrument <b>portable</b> is important. A guitar is a great example of this. Being able to hold the instrument and move around with it allows the performer to show the physical movements to the audience, while also enabling more expressive gesture in a musical performance.
+          <br><br>
+          The first prototype of Tape Traverse is Tape Slider. It uses a soft potentiometer to control the pitch of a hacked cassette player. The performer can hold the instrument, sliding on the potentiometer and even touching the tape to create different sound effects.
+        </p>
+
+        
+
+        <figure class="content-figure-container fig-wide">
+          <img src="../assets/works/tape-traverse/tapeslider-3.webp" alt="Tape Slider prototype 3">
+        </figure>
+
+        <h1 class="content-title">Prototyping</h1>
+        <p class="call-out">Building Tape Traverse: Designing, Prototyping, and Testing</p>
+        <p>
+        The case of the instrument is made by stacking layers of plywood panels cut using a laser cutter. The form is first being designed in Adobe Illustrator. With the help from Vivian, we built a 3D model of it in Rhino and sliced it into corresponding shape for each layer. <br>
+
+The pitch of the instrument is controlled using a soft potentiometer. The performer can slide on the potentiometer to create continuous gliding and bending pitch. By exposing the tape, performers can touch them to create subtle variations in timbre. <br>
+
+Additionally, the signal output from the tape went in to an optical tremolo module, a method documented in the <a href="https://makezine.com/projects/optical-tremolo-box/" target="_blank">Make Magazine in 2012</a> to create tremolo effect using light. A photocell that connects the tip and sleeve is acting as a voltage divider. The spinning disk on top of the photocell with alternating black and transparent pattern is modulating the resistance of the photocell, there by attenuating the signal in a cyclic way, creating a amplitude modulation.<br>
+
+Together, the gestures of sliding, touching the tape, and modulating the amplitude create a wide range of expression during performance, controlling the sound qualities in an organic way. When something occurs to the sound — a change in timbre, pitch, or amplitude, they are also being embodies by the physical, specifically cyclic, movement of the tape, the spinning disks, and the knobs, corroborating the idea of interplay between sound and rotation.  <br>
+        </p>
+
+
+        <figure class="content-figure-container fig-wide">
+          <img src="../assets/works/tape-traverse/diagram1.webp" alt="Circuit diagram">
+        </figure>
+        <figure class="content-figure-container fig-full">
+          <img src="../assets/works/tape-traverse/laser-cutting.webp" alt="Laser cutting">
+          <figcaption>Laser cutting files</figcaption>
+        </figure>
+
+
+        <div class="fig-grid fig-grid-2">
+          <figure class="content-figure-container">
+            <img src="../assets/works/tape-traverse/prototype1.webp" alt="Prototype v1">
+          </figure>
+          <figure class="content-figure-container">
+            <img src="../assets/works/tape-traverse/prototype2.webp" alt="Prototype v2">
+          </figure>
+        </div>
+
+        <!-- Showcases -->
+        <h1 class="content-title">Showcases</h1>
+        <p class="work-content">
+          I performed with Tape Traverse at the ITP NIME Show 2025 at Littlefield Brooklyn. The performance is 8 minutes long.
+          I incorporated a composition made using Ableton Live with the live improvisation of the instrument. I also incorporated live keyboard playing, exploring how my instrument fits within a larger music setting.
+        </p>
+        <figure class="content-figure-container fig-full">
+          <img src="../assets/works/tape-traverse/performance1.webp" alt="Performance">
+        </figure>
+        <figure class="content-figure-container fig-full">
+          <img src="../assets/works/tape-traverse/performance2.webp" alt="Performance">
+        </figure>
+          <figure class="content-figure-container fig-wide">
+          <img src="../assets/works/tape-traverse/ableton-project-screenshot.webp" alt="Ableton Project Screenshot">
+          <figcaption>Ableton Project for the Performance, Alternative Rock Style Track</figcaption>
+        </figure>
+        <iframe class="content-video" src="https://www.youtube.com/embed/tyYlDSQvRyQ?start=4569" allowfullscreen></iframe>
+
+
+        <p class="work-content">
+          Tape Traverse was also showcased at NYU ITP Spring Show 2025, where people came and tried the instrument out.
+          It is also being presented at the Omnicom Innovation Fair 2026, and has been nominated at Open Hardware Summit 2026.
+        </p>
+
+        <div class="fig-grid fig-grid-3">
+          <figure class="content-figure-container">
+            <img src="../assets/works/tape-traverse/showDiagram.webp" alt="Show diagram">
+          </figure>
+          <figure class="content-figure-container">
+            <img src="../assets/works/tape-traverse/exhibition.webp" alt="Exhibition">
+          </figure>
+        </div>
+
+        <figure class="content-figure-container fig-half">
+          <img src="../assets/works/tape-traverse/omnicon.webp" alt="Omnicom Innovation Fair">
+        </figure>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="../js/footer.js"></script>
+</body>
+</html>

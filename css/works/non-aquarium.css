@@ -1,0 +1,11 @@
+/* Standalone video inside figure — fills width, preserves aspect ratio */
+.content-figure-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* fig-grid-2: 2 equal columns */
+.fig-grid-2 {
+    grid-template-columns: 1fr 1fr;
+}

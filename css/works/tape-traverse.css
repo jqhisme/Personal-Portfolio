@@ -1,0 +1,24 @@
+/* fig-grid-1: intro — portrait left (4fr), 2 landscape stacked right (6fr) */
+.fig-grid-1 {
+    grid-template-columns: 4fr 6fr;
+    grid-template-rows: auto auto;
+}
+.fig-grid-1 .content-figure-container:first-child {
+    grid-row: 1 / 3;
+    aspect-ratio: 3 / 4;
+}
+.fig-grid-1 .content-figure-container:not(:first-child) {
+    aspect-ratio: 16 / 9;
+}
+
+/* fig-grid-2: tapeslider — 3 equal columns */
+.fig-grid-2 { grid-template-columns: 1fr 1fr; }
+.fig-grid-2 .content-figure-container {
+    aspect-ratio: 4 / 3;
+}
+
+/* fig-grid-3: process/build — 3 equal columns */
+.fig-grid-3 { grid-template-columns: 1fr 1fr; }
+.fig-grid-3 .content-figure-container {
+    aspect-ratio: 4 / 3;
+}

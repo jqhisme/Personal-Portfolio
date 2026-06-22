@@ -1,0 +1,106 @@
+
+.teaching-container {
+    flex: 1;
+    padding: 3rem 5% 5% 5%;
+}
+
+.teaching-section {
+    margin-bottom: 3.5rem;
+}
+
+.section-label {
+    font-size: 1.5rem;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 0.5rem;
+    margin: 0 0 1.5rem;
+}
+
+.teaching-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 2rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.teaching-entry:last-child {
+    border-bottom: none;
+}
+
+.entry-body {
+    flex: 1;
+}
+
+.entry-role {
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-bottom: 0.1rem;
+}
+
+.entry-course {
+    font-size: 1rem;
+    margin: 0.15rem 0;
+}
+
+.entry-school {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.15rem;
+}
+
+.entry-instructor {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.entry-topic {
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+    color: #555;
+}
+
+.entry-topic a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.entry-topic a:hover {
+    opacity: 0.5;
+}
+
+.entry-links {
+    margin-top: 0.3rem;
+    font-size: 0.85rem;
+}
+
+.entry-links a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.entry-links a:hover {
+    opacity: 0.5;
+}
+
+.entry-date {
+    font-size: 0.85rem;
+    color: #aaa;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+
+.teaching-figure-container {
+    width: 40%;
+    margin: 0 auto 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.teaching-figure-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
