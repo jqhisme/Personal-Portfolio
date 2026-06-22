@@ -30,7 +30,7 @@ p {
 /*font*/
 @font-face {
     font-family: "TitleFont";
-    src: url("../assets/fonts/ShineTypewriter.ttf") format("truetype");
+    src: url("../assets/fonts/DM-Serif-Display.ttf") format("truetype");
     font-weight: 800;
     font-style: normal;
 }
@@ -59,6 +59,6 @@ body::before {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Garamond", serif;
+    font-family: "TitleFont", serif;
     font-weight: 600;
 }
