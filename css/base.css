@@ -1,3 +1,7 @@
+html {
+    font-size: 16px;
+}
+
 figure {
     display: flex;
     flex-direction: column;
@@ -24,41 +28,51 @@ button {
 
 p {
     font-size: 1rem;
-    line-height: 1.25;
+    line-height: 1.5;
 }
 
 /*font*/
 @font-face {
     font-family: "TitleFont";
-    src: url("../assets/fonts/DM-Serif-Display.ttf") format("truetype");
-    font-weight: 800;
+    src: url("../assets/fonts/HinaMincho-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ContentFont";
+    src: url("../assets/fonts/SpaceMono-Regular.ttf") format("truetype");
+    font-weight: 400;
     font-style: normal;
 }
 
 /* @font-face {
-    font-family: "TitleFont";
-    src: url("../assets/fonts/DMSerifDisplay-Italic.ttf") format("truetype");
+    font-family: "ContentFont";
+    src: url("../assets/fonts/SpaceMono-Bold.ttf") format("truetype");
     font-weight: 800;
-    font-style: italic;
+    font-style: bold;
 } */
+
+
 
 body {
     margin: 0;
-    padding-top: 70px; /* Adjust based on your nav height */
-    font-family: "Inter", sans-serif;
+    padding-top: 70px; 
+    font-family: "Roboto Mono", sans-serif;
+    background-color: rgb(233, 238, 240);
 }
 
 body::before {
     content: '';
     position: fixed;
     inset: 0;
-    z-index: 1;
+    z-index: 9000;
     pointer-events: none;
-    /* background-image injected by js/grainBg.js */
     opacity: 0.08;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "TitleFont", serif;
-    font-weight: 600;
+    font-weight: 400;
+    font-style: normal;
 }

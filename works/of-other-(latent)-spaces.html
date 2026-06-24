@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Of Other (latent) Spaces</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/leftBar.css">
+  <link rel="stylesheet" href="../css/works/works-base.css">
+  <link rel="stylesheet" href="../css/works/of-other-(latent)-space.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <script src="../js/generateBackground.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="work-page">
+  <div id="nav"></div>
+  <script src="../js/nav.js"></script>
+
+  <div class="main-container">
+
+    <!-- Left bar -->
+    <script src="../js/leftBar.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('.main-container').prepend(createLeftBar());
+      });
+    </script>
+
+    <div class="works-content">
+
+      <!-- Banner -->
+      <div class="banner-container">
+        <img src="../assets/works/of-other-latent-spaces/banner.webp" alt="Of Other (latent) Spaces Banner" class="banner">
+      </div>
+
+      <!-- Project brief -->
+      <script src="../js/generateProjectBrief.js"></script>
+      <script src="../js/worksContentFadeIn.js"></script>
+      <script>
+        (async () => {
+          await generateProjectBrief(
+            "Of Other (Latent) Spaces",
+            `Of Other (latent) Spaces is an interactive projection mapping work that parallels latent spaces in machine learning models with physical liminal spaces. Inspired by Michel Foucault's concept of Heterotopias, this work depicts latent space as a heterotopia with transition and juxtaposition. Images from a real-time webcam are passed through various layers to be encoded into a high-dimensional representation, then decoded into a generated image of a liminal space. Viewing the work, audiences look into a representation of a high-dimensional space, latent and juxtaposed with the space they currently inhabit.`,
+            ``,
+            ["Python", "Neural Networks (StyleGAN, MobileNet)", "Mad Mapper"],
+            ["Projection Mapping", "Machine Learning"],
+            ["Individual Project"],
+            ["Daniel Rozin"]
+          );
+          animateFadeIn(document.querySelector('.works-content')?.children ?? [], 0.15);
+        })();
+      </script>
+
+      <div class="content-container">
+
+        <figure class="content-figure-container fig-wide">
+          <img src="../assets/works/of-other-latent-spaces/docimg-1.webp" alt="">
+        </figure>
+        <figure class="content-figure-container fig-full">
+          <img src="../assets/works/of-other-latent-spaces/docimg-2.webp" alt="">
+        </figure>
+        <figure class="content-figure-container fig-full">
+          <img src="../assets/works/of-other-latent-spaces/docimg-3.webp" alt="">
+        </figure>
+        <figure class="content-figure-container fig-full">
+          <img src="../assets/works/of-other-latent-spaces/docimg-4.webp" alt="">
+        </figure>
+        <figure class="content-figure-container fig-full">
+          <img src="../assets/works/of-other-latent-spaces/docimg-5.webp" alt="">
+        </figure>
+
+        <!-- The Parallel -->
+        <h1 class="content-title">The Parallel</h1>
+
+        <p>
+          Of Other (latent) Spaces is programmed using Python for imagery generation. Each square projected on the wall represents a layer in the neural network. MobileNet V3, a general-purpose image model, encodes the webcam input into a latent representation. Then StyleGAN3, a generative model, uses this representation to generate an image of a liminal space. Even though there is no direct visual resemblance between the two images, they are aligned in a high-dimensional space inside the learning model. This results in a visually reactive effect: a change in the input yields a change in the output, and the rate of change is equivalent across both images.
+        </p>
+
+        <figure class="content-figure-container fig-wide">
+          <img src="../assets/works/of-other-latent-spaces/demo-1.webp" alt="Generated liminal space">
+        </figure>
+        <figure class="content-figure-container fig-half">
+          <img src="../assets/works/of-other-latent-spaces/demo-2.webp" alt="Generated liminal space">
+        </figure>
+        <figure class="content-figure-container fig-half">
+          <img src="../assets/works/of-other-latent-spaces/demo-3.webp" alt="Generated liminal space">
+        </figure>
+
+        <p>
+          The output for each layer is extracted using PyTorch, arranged in MadMapper, and projected onto the wall.
+        </p>
+
+        <figure class="content-figure-container fig-half">
+          <video autoplay loop playsinline>
+            <source src="../assets/works/of-other-latent-spaces/vid.mp4" type="video/mp4">
+          </video>
+        </figure>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="../js/footer.js"></script>
+</body>
+</html>
