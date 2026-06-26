@@ -32,11 +32,11 @@
     justifiedGallery(
       document.getElementById('gallery'),
       'assets/lab',
-      { rowHeight: 260, gap: 6 }
+      { rowHeight: 350, gap: 6 }
     ).then(count => {
       const status = document.getElementById('gallery-status');
       status.style.display = count ? 'none' : 'block';
-      if (!count) status.textContent = 'No images found.';
+      if (!count) status.textContent = 'No media found.';
     });
   </script>
 
