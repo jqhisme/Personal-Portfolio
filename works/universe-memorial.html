@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universe Memorial</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/leftBar.css">
+  <link rel="stylesheet" href="../css/works/works-base.css">
+  <link rel="stylesheet" href="../css/works/universe-memorial.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <script src="../js/generateBackground.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="work-page">
+  <div id="nav"></div>
+  <script src="../js/nav.js"></script>
+
+  <div class="main-container">
+
+    <!-- Left bar -->
+    <script src="../js/leftBar.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('.main-container').prepend(createLeftBar());
+      });
+    </script>
+
+    <div class="works-content">
+
+      <!-- Banner -->
+      <div class="banner-container">
+        <img src="../assets/works/universe-memorial/banner.webp" alt="Universe Memorial Banner" class="banner">
+      </div>
+
+      <!-- Project brief -->
+      <script src="../js/generateProjectBrief.js"></script>
+      <script src="../js/worksContentFadeIn.js"></script>
+      <script>
+        (async () => {
+          await generateProjectBrief(
+            "Universe Memorial",
+            `While talking with his friend, a man hallucinated about the universe and "witnessed" himself falling into the glass in front of him.`,
+            ``,
+            ["Adobe After Effects", "SketchBook Pro"],
+            ["Storytelling", "Animation"],
+            ["Personal Project"],
+            ["Zhiyuan Yang for Dubbing", "Dakota Gearhart"]
+          );
+          animateFadeIn(document.querySelector('.works-content')?.children ?? [], 0.15);
+        })();
+      </script>
+
+      <div class="content-container">
+
+        <figure class="content-figure-container">
+          <iframe class="content-video" src="https://drive.google.com/file/d/1C2ltgqCO1z_tVvQMiYyPIop9amw_DR4l/preview" allowfullscreen></iframe>
+        </figure>
+
+        <p>
+          宇宙 (Yu Zhou) is the Universe. And 灵堂 (Ling Tang), unique to Chinese culture, is a shrine or a memorial devoted to those who have passed away. Ling Tang typically has a coffin and a black-and-white photograph of the deceased. 宇宙灵堂 denotes the memorial built after the universe died — an ultimate representation of nothingness. If our whole world is approaching nothing, then who are we right now?
+        </p>
+
+        <p>
+          It was a night on the Brooklyn Bridge, with the wind brushing against my face and the traffic roaring around me. I knew that the water was surging beneath and, deep in the dark sky, planets were drifting incessantly. As I walked along this seemingly endless bridge, I had a sudden realization that, much like all the other motions in the world, our lives simply continue to go on.
+        </p>
+
+        <!-- Moodboard & Inspirations -->
+        <h1 class="content-title">Moodboard &amp; Inspirations</h1>
+
+        <p class="call-out">Films by Chinese Director 刘健 (Liu Jian): Piercing I (2010), Have a Nice Day (2018)</p>
+        <p>
+          Liu Jian combines the aesthetics of unpolished drawings with 80s Chinese animation style in his movies. From the views of mundane characters, he narrates stories that show sarcasm and power.
+        </p>
+
+        <p class="call-out">Multiverse</p>
+        <p>
+          In the film Everything Everywhere All At Once (2022), characters' struggles and feelings are carried across the multiverse. In different worlds, they are all trapped in similar plights.
+        </p>
+
+        <p class="call-out">Everything and Nothing (2011)</p>
+        <p>
+          A documentary where doctor Jim Al-Khalili discussed what is nothingness from a scientific perspective, explaining how the universe is expanding and how stars are getting farther from us rapidly.
+        </p>
+
+        <p class="call-out">My Life</p>
+        <p>
+          Living real while feeling digital.
+        </p>
+
+        <figure class="content-figure-container fig-half">
+          <img src="../assets/works/universe-memorial/storyboard.webp" alt="Storyboard">
+        </figure>
+
+        <figure class="content-figure-container">
+          <img src="../assets/works/universe-memorial/process.webp" alt="Process">
+        </figure>
+
+        <!-- Storytelling Strategies -->
+        <h1 class="content-title">Storytelling Strategies</h1>
+
+        <p class="call-out">Doodles / Unpolished Drawing</p>
+        <p>
+          By using unpolished drawing, the animation brings audiences into a dark and empty atmosphere. It evokes the feeling of being nostalgic, fragile, and volatile.
+        </p>
+
+        <p class="call-out">Abrupt and Frequent Cuts</p>
+        <p>
+          Abrupt and frequent cuts, flashing imagery, and glitching effects are used to convey the hallucination of characters.
+        </p>
+
+        <p class="call-out">Foreshadowing and Correspondence</p>
+        <p>
+          Foreshadowing contributes to the coherence of the story. The character wearing a sweatshirt with the logo "NASA" foreshadows the fantasy of universe occurring later. This character will indeed become the earth in the hallucination.
+        </p>
+
+        <div class="fig-grid fig-grid-2col">
+          <figure class="content-figure-container">
+            <img src="../assets/works/universe-memorial/doc-1.webp" alt="Universe Memorial">
+          </figure>
+          <figure class="content-figure-container">
+            <img src="../assets/works/universe-memorial/doc-2.webp" alt="Universe Memorial">
+          </figure>
+          <figure class="content-figure-container">
+            <img src="../assets/works/universe-memorial/doc-3.webp" alt="Universe Memorial">
+          </figure>
+          <figure class="content-figure-container">
+            <img src="../assets/works/universe-memorial/doc-4.webp" alt="Universe Memorial">
+          </figure>
+          <figure class="content-figure-container">
+            <img src="../assets/works/universe-memorial/doc-5.webp" alt="Universe Memorial">
+          </figure>
+          <figure class="content-figure-container">
+            <img src="../assets/works/universe-memorial/doc-6.webp" alt="Universe Memorial">
+          </figure>
+        </div>
+
+        <div class="dialogue">
+          <p><span class="dialogue-zh">你说，人死了埋在土里，那宇宙死了去哪里</span><br>So, people are buried underground after they died. Where does the universe go after it dies?</p>
+          <p><span class="dialogue-zh">宇宙？宇宙还会死吗？</span><br>Universe? Will the universe die?</p>
+          <p><span class="dialogue-zh">会的！宇宙在变得越来越大，星星在离我们越来越远</span><br>Yes! The universe is getting larger, and the stars are getting farther from us.</p>
+          <p><span class="dialogue-zh">宇宙死了的时候你早就没了，你还在想什么？</span><br>You already died when the universe is gone. What are you talking about?</p>
+          <p><span class="dialogue-zh">宇宙灵堂吧。</span><br>It's the Universe Memorial.</p>
+          <p><span class="dialogue-zh">啥？</span><br>What?</p>
+          <p><span class="dialogue-zh">等宇宙死了，依旧还存在的，就是宇宙灵堂吧</span><br>When the universe had gone, what still exists is probably the Universe Memorial.</p>
+        </div>
+
+        <figure class="content-figure-container">
+          <img src="../assets/works/universe-memorial/final-img.webp" alt="Universe Memorial Ending">
+        </figure>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="../js/footer.js"></script>
+</body>
+</html>

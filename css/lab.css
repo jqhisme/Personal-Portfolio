@@ -1,0 +1,11 @@
+.lab-content {
+  flex: 1;
+  min-width: 0;
+  padding-bottom: 5%;
+}
+
+#gallery-status {
+  color: #999;
+  font-size: 0.9rem;
+  margin: 0;
+}

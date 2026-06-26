@@ -5,7 +5,7 @@ const nav = `
   <ul class="nav-links">
     <li><a href="/index.html">Works</a></li>
     <li><a href="/about.html">About</a></li>
-    <li><a href="/labs.html">Lab</a></li>
+    <li><a href="/lab.html">Lab</a></li>
     <li><a href="/teaching.html">Teaching</a></li>
   </ul>
 </nav>

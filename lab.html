@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab — Christoff Qihan Jiang</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/leftBar.css">
+  <link rel="stylesheet" href="css/lab.css">
+  <script src="js/generateBackground.js"></script>
+</head>
+<body>
+
+  <div id="nav"></div>
+  <script src="js/nav.js"></script>
+
+  <div class="main-container">
+
+    <aside class="left-bar">All my experiments...</aside>
+
+    <div class="lab-content">
+      <p id="gallery-status">Loading...</p>
+      <div id="gallery"></div>
+    </div>
+
+  </div>
+
+  <script src="js/justifiedGallery.js"></script>
+  <script>
+    justifiedGallery(
+      document.getElementById('gallery'),
+      'assets/lab',
+      { rowHeight: 260, gap: 6 }
+    ).then(count => {
+      const status = document.getElementById('gallery-status');
+      status.style.display = count ? 'none' : 'block';
+      if (!count) status.textContent = 'No images found.';
+    });
+  </script>
+
+</body>
+</html>

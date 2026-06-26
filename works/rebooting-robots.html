@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rebooting Robots</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/leftBar.css">
+  <link rel="stylesheet" href="../css/works/works-base.css">
+  <link rel="stylesheet" href="../css/works/rebooting-robots.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <script src="../js/generateBackground.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="work-page">
+  <div id="nav"></div>
+  <script src="../js/nav.js"></script>
+
+  <div class="main-container">
+
+    <!-- Left bar -->
+    <script src="../js/leftBar.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('.main-container').prepend(createLeftBar());
+      });
+    </script>
+
+    <div class="works-content">
+
+      <!-- Banner -->
+      <div class="banner-container">
+        <img src="../assets/works/rebooting-robots/banner.webp" alt="Rebooting Robots Banner" class="banner">
+      </div>
+
+      <!-- Project brief -->
+      <script src="../js/generateProjectBrief.js"></script>
+      <script src="../js/worksContentFadeIn.js"></script>
+      <script>
+        (async () => {
+          await generateProjectBrief(
+            "Rebooting Robots",
+            `A series of robots made from daily objects. By running machine learning models both locally on ESP32 and remotely, these objects explore how personality can transform our perception of daily objects.`,
+            ``,
+            ["ESP32, C++", "Python, Flask API, Ultralytics", "Rhino, 3D Printing"],
+            ["Physical Computing", "Robotics"],
+            ["Software and Hardware Programmer"],
+            ["Vivian Jia for Concept and Fabrication", "Pedro G. C. de Oliveira"]
+          );
+          animateFadeIn(document.querySelector('.works-content')?.children ?? [], 0.15);
+        })();
+      </script>
+
+      <div class="content-container">
+
+        <!-- The Fan -->
+        <h1 class="content-title">The Fan</h1>
+
+        <p class="call-out">A fan that moves by itself. When finding someone is angry, it will follow the person and blow wind toward the person.</p>
+
+        <ul>
+          <li>3D modeling: Rhino</li>
+          <li>Hardware: XiaoESP32, 2 Servo motors (2 joints), 1 DC motor</li>
+          <li>Backend: Python, FlaskAPI, OpenCV, YOLO</li>
+        </ul>
+
+        <figure class="content-figure-container">
+          <img src="../assets/works/rebooting-robots/fan.webp" alt="The Fan">
+        </figure>
+
+        <figure class="content-figure-container">
+          <iframe class="content-video" src="https://drive.google.com/file/d/1nPSNLF7xAdAv51YpRcDC1Mh7Tr6mbtxY/preview" allowfullscreen></iframe>
+        </figure>
+
+        <p>
+          To keep the device compact, we selected a Xiao ESP32 with an integrated camera module. Unlike our previous prototype, which was limited by available GPIO pins, this configuration supported both computer vision and control of multiple actuators within a small form factor.
+        </p>
+
+        <p>
+          We also designed the system architecture in a way, rather than having the microcontroller send images for processing and wait for a response, the ESP32 served a live video stream while a laptop client handled computer vision and behavior updates. This event-driven approach reduced latency, enabled continuous operation, and simplified deployment by providing a stable network endpoint.
+        </p>
+
+        <p>
+          The system uses open-source YOLO-based models for face and emotion detection, enabling real-time interaction based on audience expressions. During testing, we observed that model performance degraded for rotated or non-frontal faces, reflecting biases in the training data. This limitation informed both our evaluation process and future directions for improving robustness in real-world environments.
+        </p>
+
+        <figure class="content-figure-container fig-wide">
+          <img src="../assets/works/rebooting-robots/fan-model.webp" alt="Fan 3D Model">
+        </figure>
+
+        <figure class="content-figure-container fig-wide">
+          <img src="../assets/works/rebooting-robots/fan-parts.webp" alt="Fan Parts">
+        </figure>
+
+        <div class="fig-grid fig-grid-1">
+          <figure class="content-figure-container">
+            <img src="../assets/works/rebooting-robots/fan-test-1.webp" alt="Fan Testing">
+          </figure>
+          <figure class="content-figure-container">
+            <img src="../assets/works/rebooting-robots/fan-test-2.webp" alt="Fan Testing">
+          </figure>
+        </div>
+
+        <!-- The Tail -->
+        <h1 class="content-title">The Tail</h1>
+
+        <p class="call-out">A sprinkle head that wants a body. It will move its tail when seeing someone, and move its tail eagerly when seeing a bottle.</p>
+
+        <ul>
+          <li>3D modeling: Rhino</li>
+          <li>Hardware: ESP32-CAM, Servo Motor</li>
+          <li>Backend: Python, FlaskAPI, SmolVLM, YOLO</li>
+        </ul>
+
+        <div class="fig-grid fig-grid-2">
+          <figure class="content-figure-container">
+            <video autoplay loop muted playsinline>
+              <source src="../assets/works/rebooting-robots/tail-1.mp4" type="video/mp4">
+            </video>
+          </figure>
+          <figure class="content-figure-container">
+            <video autoplay loop muted playsinline>
+              <source src="../assets/works/rebooting-robots/tail-2.mp4" type="video/mp4">
+            </video>
+          </figure>
+        </div>
+
+        <figure class="content-figure-container fig-wide">
+          <img src="../assets/works/rebooting-robots/tail-model.webp" alt="Tail 3D Model">
+        </figure>
+
+        <figure class="content-figure-container fig-wide">
+          <img src="../assets/works/rebooting-robots/tail-parts.webp" alt="Tail Parts">
+        </figure>
+
+        <div class="fig-grid fig-grid-2">
+          <figure class="content-figure-container">
+            <video autoplay loop muted playsinline>
+              <source src="../assets/works/rebooting-robots/tailtesting-1.mp4" type="video/mp4">
+            </video>
+          </figure>
+          <figure class="content-figure-container">
+            <video autoplay loop muted playsinline>
+              <source src="../assets/works/rebooting-robots/tailtesting-2.mp4" type="video/mp4">
+            </video>
+          </figure>
+        </div>
+
+        
+        <figure class="content-figure-container">
+          <img src="../assets/works/rebooting-robots/tail-vision.webp" alt="Tail Vision">
+          <figcaption>Vision of the tail, accidentally flipped</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="../js/footer.js"></script>
+</body>
+</html>

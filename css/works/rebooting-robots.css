@@ -1,0 +1,26 @@
+/* fig-grid-1: 2-column portrait image pair */
+.fig-grid-1 {
+    grid-template-columns: 1fr 1fr;
+}
+.fig-grid-1 .content-figure-container {
+    aspect-ratio: 3 / 4;
+}
+
+/* fig-grid-2: 2-column portrait grid for video pairs */
+.fig-grid-2 {
+    grid-template-columns: 1fr 1fr;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.fig-grid-2 .content-figure-container {
+    aspect-ratio: 9 / 16;
+}
+.fig-grid-2 .content-figure-container video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}

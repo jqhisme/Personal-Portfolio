@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Round Table</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/leftBar.css">
+  <link rel="stylesheet" href="../css/works/works-base.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <script src="../js/generateBackground.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="work-page">
+  <div id="nav"></div>
+  <script src="../js/nav.js"></script>
+
+  <div class="main-container">
+
+    <!-- Left bar -->
+    <script src="../js/leftBar.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('.main-container').prepend(createLeftBar());
+      });
+    </script>
+
+    <div class="works-content">
+
+      <!-- Banner -->
+      <div class="banner-container">
+        <img src="../assets/works/round-table/banner.webp" alt="Round Table Banner" class="banner">
+      </div>
+
+      <!-- Project brief -->
+      <script src="../js/generateProjectBrief.js"></script>
+      <script src="../js/worksContentFadeIn.js"></script>
+      <script>
+        (async () => {
+          await generateProjectBrief(
+            "Round Table",
+            `Round Table is a short stop-motion animation built from over 300 AI-generated images, each based on hand-drawn sketches and digital collages. Set at a Shanghainese family's Chinese New Year dinner, the film explores how cultural expectation, gender roles, and generational pressure are performed through everyday rituals.`,
+            `Round Table received Best Music Nomination at AI Film Hackathon 2025. I was also awarded Best Storytelling, Character &amp; Environment Narratives, at Artiver AI Art Award 2025 and documented in Prompt Magazine Issue 16. It is being shown at theBlanc Gallery, Time Square, and Burano AI Film Festival.`,
+            ["Stable Diffusion", "MusicGen", "Hugging Face", "ElevenLabs", "Photoshop", "Ableton", "Adobe Premiere Pro"],
+            ["Storytelling", "AI Art"],
+            ["AI Sound Designer", "Concept"],
+            ["Beatrice Mai as Co-writer, AI Visual Direction", "Haoren Zhong as Co-writer, Dubbing Direction", "Zongshuai Zhang as AI Visual Technician, Art Direction"]
+          );
+          animateFadeIn(document.querySelector('.works-content')?.children ?? [], 0.15);
+        })();
+      </script>
+
+      <div class="content-container">
+
+        <figure class="content-figure-container">
+          <iframe class="content-video" src="https://www.youtube.com/embed/EpFa-x9p0wo" allowfullscreen></iframe>
+        </figure>
+
+        <p>
+          While rooted in a specific context, the dynamics of Round Table echo broadly across Asian diaspora. Rather than using AI for polish or realism, the film embraces the medium's instability by leaning into errors, inconsistencies, and artifacts that emerge in the generative process. Through a labor-intensive, manual stop-motion post-production workflow, these glitches become a visual language of Asian familial rupture and refusal. Round Table subverts expectations of AI perfection and reframes its so-called failures into a space of cultural memory, where marginalized identities and erased narratives reassert themselves.
+        </p>
+
+        <figure class="content-figure-container">
+          <img src="../assets/works/round-table/doc-1.webp" alt="Round Table Documentation">
+        </figure>
+
+        <figure class="content-figure-container">
+          <img src="../assets/works/round-table/doc-2.webp" alt="Round Table Documentation">
+        </figure>
+
+        <figure class="content-figure-container">
+          <img src="../assets/works/round-table/doc-3.webp" alt="Round Table Documentation">
+        </figure>
+
+        <figure class="content-figure-container">
+          <img src="../assets/works/round-table/doc-4.webp" alt="Round Table Documentation">
+        </figure>
+
+        <figure class="content-figure-container">
+          <img src="../assets/works/round-table/doc-5.webp" alt="Round Table Documentation">
+        </figure>
+
+        <figure class="content-figure-container">
+          <img src="../assets/works/round-table/doc-6.webp" alt="Round Table Documentation">
+        </figure>
+
+        <figure class="content-figure-container fig-half">
+          <img src="../assets/works/round-table/doc-7.webp" alt="Round Table Documentation">
+        </figure>
+
+        <figure class="content-figure-container fig-half">
+          <img src="../assets/works/round-table/doc-8.webp" alt="Round Table Documentation">
+        </figure>
+
+        <!-- Process -->
+        <h1 class="content-title">Process</h1>
+
+        <figure class="content-figure-container">
+          <img src="../assets/works/round-table/process-1.webp" alt="Round Table Process">
+        </figure>
+
+        <figure class="content-figure-container">
+          <img src="../assets/works/round-table/process-2.webp" alt="Round Table Process">
+        </figure>
+
+        <figure class="content-figure-container">
+          <img src="../assets/works/round-table/process-3.webp" alt="Round Table Process">
+        </figure>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="../js/footer.js"></script>
+</body>
+</html>
