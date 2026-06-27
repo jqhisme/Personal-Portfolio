@@ -1,0 +1,173 @@
+/*RESPONSIVE — Tablet & Mobile Breakpoints*/
+
+/* ── Tablet (≤ 1024px) ── */
+@media (max-width: 1024px) {
+  .project-grid {
+    gap: 24px;
+  }
+
+  .project-meta-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── Mobile (≤ 768px) ── */
+@media (max-width: 768px) {
+
+  /* Nav */
+  .nav {
+    padding: 0.75rem 1.25rem;
+  }
+
+  .nav-name {
+    font-size: 1.1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* ── Main layout: stack vertically ── */
+  .main-container {
+    flex-direction: column;
+    padding: 5rem 1.25rem 3rem;
+    gap: 0;
+  }
+
+  .content-container {
+    padding: 0;
+  }
+
+  /* ── Left bar: horizontal filter strip ── */
+  .left-bar {
+    flex: none;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    position: static;
+    top: auto;
+  }
+
+  .left-title,
+  .left-bar-title {
+    width: 100%;
+    font-size: 0.8rem;
+    margin: 0 0 0.25rem;
+  }
+
+  .left-btn {
+    padding: 0.3rem 0.75rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    font-size: 0.85rem;
+  }
+
+  /* ── Project grid: single column ── */
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  /* ── About page ── */
+  .about-me-container {
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+    padding: 5rem 1.25rem 3rem;
+    gap: 1.5rem;
+  }
+
+  .about-me-container .left {
+    width: 100%;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .about-me-container .right {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  #profile-image {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    object-position: left;
+  }
+
+  /* ── Teaching page ── */
+  .teaching-container {
+    padding: 1.5rem 0;
+  }
+
+  .teaching-figure-container {
+    width: 100%;
+  }
+
+  .teaching-entry {
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: flex-start;
+  }
+
+  .entry-date {
+    order: -1;
+  }
+
+  /* ── Works pages ── */
+  .works-content {
+    padding: 0 0 2rem;
+  }
+
+  .work-page .content-container {
+    padding: 0;
+  }
+
+  .content-container p {
+    margin: 1.5rem 0;
+  }
+
+  .project-title-container {
+    grid-template-columns: 1fr;
+  }
+
+  .brief-title       { grid-column: 1; }
+  .brief-date        { grid-column: 1; grid-row: auto; text-align: left; }
+  .brief-labels      { grid-column: 1; }
+  .brief-description { grid-column: 1; }
+
+  .project-meta-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-right: 0;
+  }
+
+  /* Standalone size modifiers */
+  .fig-wide,
+  .fig-half {
+    width: 100%;
+  }
+
+  /* All fig-grid variants collapse to single column */
+  .fig-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Lab page ── */
+  .lab-content {
+    padding-top: 1rem;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    padding: 1rem 1.25rem 3rem;
+  }
+}
