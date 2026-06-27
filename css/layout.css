@@ -15,9 +15,9 @@
 /* Project Grid */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px; 
-  padding-top: 11%;
+  padding-top: 15%;
 }
 
 /* Image container with 4:3 aspect ratio */

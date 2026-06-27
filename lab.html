@@ -18,7 +18,7 @@
 
   <div class="main-container">
 
-    <aside class="left-bar">All my experiments...</aside>
+    <aside class="left-bar"><h2 class="left-bar-title">all my experiments...</h2></aside>
 
     <div class="lab-content">
       <p id="gallery-status">Loading...</p>
@@ -32,7 +32,7 @@
     justifiedGallery(
       document.getElementById('gallery'),
       'assets/lab',
-      { rowHeight: 350, gap: 6 }
+      { rowHeight: 440, gap: 6 }
     ).then(count => {
       const status = document.getElementById('gallery-status');
       status.style.display = count ? 'none' : 'block';
