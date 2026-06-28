@@ -18,7 +18,10 @@ function createProjectGrid(projects) {
                     <p class="project-subtitle">${project.subtitle}</p>
                 </div>
             </div>
-            <h3>${project.title}</h3>
+            <div class="project-card-footer">
+                <span class="project-year">${project.time?.match(/\d{4}/)?.[0] ?? ''}</span>
+                <h3>${project.title}</h3>
+            </div>
         </a>
         `;
         grid.appendChild(card);

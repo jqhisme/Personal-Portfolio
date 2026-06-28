@@ -4,7 +4,8 @@
   align-items: center;
   padding: 1rem 2rem;
   position: fixed;
-  background-color: inherit;
+  background-color: #f4f4f4;
+  /* border-bottom: 1px dotted #292929; */
   top: 0;
   left: 0;
   right: 0;  

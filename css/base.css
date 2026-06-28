@@ -34,15 +34,15 @@ p {
 /*font*/
 @font-face {
     font-family: "TitleFont";
-    src: url("../assets/fonts/IMFellDoublePicaSC-Regular.ttf") format("truetype");
-    font-weight: 400;
+    src: url("../assets/fonts/TimesDotRom.otf") format("truetype");
+    font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: "ContentFont";
-    src: url("../assets/fonts/HinaMincho-Regular.ttf") format("truetype");
-    font-weight: 400;
+    src: url("../assets/fonts/Lato-Regular.ttf") format("truetype");
+    font-weight: 450;
     font-style: normal;
 }
 
@@ -58,21 +58,21 @@ p {
 body {
     margin: 0;
     padding-top: 70px; 
-    font-family: "Roboto Mono", sans-serif;
-    background-color: rgb(233, 238, 240);
+    font-family: "ContentFont", sans-serif;
+    background-color: rgb(247, 247, 247);
 }
 
 body::before {
     content: '';
     position: fixed;
     inset: 0;
-    z-index: 9000;
+    z-index: -1;
     pointer-events: none;
-    opacity: 0.08;
+    opacity: 0.1;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "TitleFont", serif;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
 }
