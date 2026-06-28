@@ -156,9 +156,9 @@
   }
 
   .brief-title       { grid-column: 1; }
-  .brief-date        { grid-column: 1; grid-row: auto; text-align: left; }
-  .brief-labels      { grid-column: 1; }
-  .brief-description { grid-column: 1; }
+  .brief-date        { grid-column: 1; grid-row: 3; text-align: left; }
+  .brief-labels      { grid-column: 1; grid-row: 2; }
+  .brief-description { grid-column: 1; grid-row: 4; }
 
   .project-meta-container {
     grid-template-columns: 1fr;

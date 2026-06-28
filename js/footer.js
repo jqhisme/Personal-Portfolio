@@ -1,6 +1,6 @@
 const footer = `
 <footer class="footer">
-  <a href="/index.html" class="footer-back">&larr; back</a>
+  <a href="/index.html" class="footer-back">&lt; Back</a>
 
   <div class="footer-socials">
     <a href="https://www.linkedin.com/in/qihan-jiang/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
