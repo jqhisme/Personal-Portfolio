@@ -35,7 +35,7 @@ p {
 @font-face {
     font-family: "TitleFont";
     src: url("../assets/fonts/TimesDotRom.otf") format("truetype");
-    font-weight: 600;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -73,6 +73,7 @@ body::before {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "TitleFont", serif;
-    font-weight: 600;
+    font-weight: 400;
     font-style: normal;
 }
+

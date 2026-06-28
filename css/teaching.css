@@ -9,10 +9,9 @@
 }
 
 .section-label {
-    font-size: 1.5rem;
     border-bottom: 1px solid #e8e8e8;
     padding-bottom: 0.5rem;
-    margin: 0 0 1.5rem;
+    margin: 0 0 0.8rem;
 }
 
 .teaching-entry {

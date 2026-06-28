@@ -39,14 +39,13 @@
     padding: 0;
   }
 
-  /* ── Left bar: horizontal filter strip ── */
+  /* ── Left bar: title row + scrollable button row ── */
   .left-bar {
     flex: none;
     width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: center;
+    max-height: none;
+    overflow: visible;
+    flex-direction: column;
     gap: 0.5rem;
     padding: 1rem 0;
     border: none;
@@ -60,18 +59,29 @@
 
   .left-title,
   .left-bar-title {
-    width: 100%;
     font-size: 0.8rem;
-    margin: 0 0 0.25rem;
+    margin: 0;
+  }
+
+  .left-btn-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.5rem;
   }
 
   .left-btn {
     padding: 0.3rem 0;
-    border: none;
-    border-radius: 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
     font-size: 0.85rem;
+    padding: 0.3rem 0.5rem;
     color: inherit;
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    white-space: nowrap;
   }
 
   /* ── Project grid: single column ── */

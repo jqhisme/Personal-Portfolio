@@ -16,6 +16,9 @@ function createLeftBar(sections) {
         ...Array.from(document.querySelectorAll('.content-title')).map(el => el.textContent.trim())
     ];
 
+    const btnRow = document.createElement('div');
+    btnRow.className = 'left-btn-row';
+
     sectionList.forEach(section => {
         const button = document.createElement('button');
         button.className = 'left-btn';
@@ -36,8 +39,10 @@ function createLeftBar(sections) {
             }
         });
 
-        aside.appendChild(button);
+        btnRow.appendChild(button);
     });
+
+    aside.appendChild(btnRow);
 
     return aside;
 }
