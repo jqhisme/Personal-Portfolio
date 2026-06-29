@@ -38,7 +38,7 @@
 }
 
 .content-container p{
-    margin:2rem 12% 2rem 0;
+    margin:0rem 12% 1.5rem 0;
 }
 
 /* ── Project title block ── */
@@ -53,7 +53,7 @@
     padding-top: 1.5rem;
 }
 .brief-title        { grid-column: 1/6; grid-row: 1; margin: 0; font-size: 3rem; text-transform: uppercase; }
-.brief-date         { grid-column: 6;   grid-row: 1; text-align: right; margin: 0; }
+.brief-date         { grid-column: 6;   grid-row: 1; text-align: right; margin: 0; font-size: 0.9rem;}
 .brief-labels       { grid-column: 1/6; grid-row: 2; margin: 0; margin-top: 0.2rem; font-size: 0.9rem; color: #555; }
 .brief-description  { grid-column: 1/6; grid-row: 3; margin: 0; margin-top: 1rem; }
 
@@ -90,15 +90,24 @@
     margin-bottom: 0.5rem;
 }
 
-/* ── Call-out heading ── */
+/* ── Call-out sentences ── */
 .call-out {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 400;
-    margin: 1.5rem 0 0.5rem 0;
+    margin: 1.5rem 0 1.5rem 0;
 }
 
+.content-container p.small-heading{
+    font-weight: 600;
+    margin: 0;
+}
+
+
 .content-title {
-    margin: 4rem 0 1rem 0;
+    margin: 4rem 60% 2rem 0;
+    padding: 0 0 0 0;
+    border-bottom: 1px dashed #000000;
+    
 }
 
 /* ── Figures ── */

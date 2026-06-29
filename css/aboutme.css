@@ -27,13 +27,13 @@
     display: block;
     width: auto;
     height: auto;
-    max-width: 100%;
+    max-width: 90%;
     max-height: calc(100vh - 5rem);
 }
 
 .about-me-container .right figcaption {
-    align-self: center;
-    text-align: center;
+    align-self: right;
+    text-align: right;
 }
 
 figure.right {
