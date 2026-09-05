@@ -1,6 +1,6 @@
 const nav = `
 <nav class="nav">
-  <a href="/index.html" class="nav-name">Christoff Qihan Jiang</a>
+  <a href="/index.html" class="nav-name">Qihan Jiang</a>
 
   <ul class="nav-links">
     <li><a href="/index.html">Works</a></li>
