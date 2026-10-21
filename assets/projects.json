@@ -20,7 +20,7 @@
         "image":"assets/thumbnails/tape-traverse.webp"
     },
     {
-        "id":3,
+        "id":5,
         "title":"Drip Feed",
         "subtitle":"Time as Remedy",
         "showcases":["Complication Group Show"],
@@ -40,7 +40,7 @@
         "image":"assets/thumbnails/non-aquarium.webp"
     },
     {
-        "id":5,
+        "id":6,
         "title":"Of Other (Latent) Spaces",
         "subtitle":"Latent Space in StyleGAN Juxtaposting the Reality",
         "showcases":["ITP Spring Show 2025"],
@@ -50,7 +50,7 @@
         "image":"assets/thumbnails/of-other-latent-space.webp"
     },
     {
-        "id":6,
+        "id":7,
         "title":"Rebooting Robots",
         "subtitle":"Transforming Daily Objects with Personalities",
         "showcases":[],
@@ -60,7 +60,7 @@
         "image":"assets/thumbnails/rebooting-robots.webp"
     },
     {
-        "id":7,
+        "id":3,
         "title":"Round Table",
         "subtitle":"AI Generated Film Collage for Chinese Round Table Ritual",
         "showcases":["Best Sound Nominee, MIT AI Film Hackathon 2025","Artiver AI Art Award 2025","Prompt Magazine Issue 16"],

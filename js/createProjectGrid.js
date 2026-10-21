@@ -1,7 +1,7 @@
 function createProjectGrid(projects) {
     const grid = document.createElement('div');
     grid.className = 'project-grid';
-    projects.forEach(project => {
+    [...projects].sort((a, b) => a.id - b.id).forEach(project => {
         const card = document.createElement('div');
         card.className = 'project-card';
         card.projectType = project.type; // store project type for filtering
