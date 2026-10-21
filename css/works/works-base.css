@@ -105,9 +105,9 @@
 
 
 .content-title {
-    margin: 4rem 60% 2rem 0;
+    margin: 4rem 60% 1rem 0;
     padding: 0;
-    border-bottom: 1px dashed #2c2c2c;
+    /*border-bottom: 1px dashed #2c2c2c;*/
 }
 
 /* ── Figures ── */

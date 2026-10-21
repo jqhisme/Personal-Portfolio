@@ -79,9 +79,9 @@
 }
 
 .project-label {
-  color: rgb(214, 212, 212);
+  color: white;
   font-size: 0.8rem;
-  line-height: 1.25;
+  line-height: 1.4;
   margin: 0;
   text-align: left;
 }
