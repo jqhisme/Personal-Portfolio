@@ -4,6 +4,7 @@
         "title":"Odyssey",
         "subtitle":"Cinema as a Navigable Space with Machine Learning",
         "showcases":["ITP Thesis 2026","NYC Resistor Peripheral Show"],
+        "tags":["Storytelling","Machine Learning" ,"Interaction Design"],
         "type":"media",
         "time":"Spring 2026",
         "image":"assets/thumbnails/odyssey.webp"
@@ -13,6 +14,7 @@
         "title":"Tape Traverse",
         "subtitle":"Interplay between Sound and Rotation",
         "showcases":["Open Hardware Summit 2026","ITP NIME Show 2025","Omnicron Innovation Showcase"],
+        "tags":["Sound Design","Hardware" ,"Performance"],
         "type":"media",
         "time":"Fall 2025",
         "image":"assets/thumbnails/tape-traverse.webp"
@@ -22,6 +24,7 @@
         "title":"Drip Feed",
         "subtitle":"Time as Remedy",
         "showcases":["Complication Group Show"],
+        "tags":["Installation","Data Visualization"],
         "type":"media",
         "time":"Fall 2025",
         "image":"assets/thumbnails/drip-feed.webp"
@@ -31,6 +34,7 @@
         "title":"Non Aquarium",
         "subtitle":"Sonify Jellyfish",
         "showcases":["NY Tech Week 2026","NYU Music Tech Open House"],
+        "tags":["Sound Design","Data Sonification","Creative Coding"],
         "type":"media",
         "time":"Spring 2025",
         "image":"assets/thumbnails/non-aquarium.webp"
@@ -40,6 +44,7 @@
         "title":"Of Other (Latent) Spaces",
         "subtitle":"Latent Space in StyleGAN Juxtaposting the Reality",
         "showcases":["ITP Spring Show 2025"],
+        "tags":["Projection Mapping","Machine Learning"],
         "type":"media",
         "time":"Spring 2025",
         "image":"assets/thumbnails/of-other-latent-space.webp"
@@ -49,6 +54,7 @@
         "title":"Rebooting Robots",
         "subtitle":"Transforming Daily Objects with Personalities",
         "showcases":[],
+        "tags":["Hardware","Robotics"],
         "type":"media",
         "time":"Spring 2026",
         "image":"assets/thumbnails/rebooting-robots.webp"
@@ -56,8 +62,9 @@
     {
         "id":7,
         "title":"Round Table",
-        "subtitle":"AI Generated Collage for Chinese Round Table Ritual",
+        "subtitle":"AI Generated Film Collage for Chinese Round Table Ritual",
         "showcases":["Best Sound Nominee, MIT AI Film Hackathon 2025","Artiver AI Art Award 2025","Prompt Magazine Issue 16"],
+        "tags":["AI Art","Storytelling"],
         "type":"media",
         "time":"Spring 2025",
         "image":"assets/thumbnails/round-table.webp"
@@ -67,6 +74,7 @@
         "title":"Universe Memorial",
         "subtitle":"Experimental Animation for Nothingness",
         "showcases":[],
+        "tags":["Animation","Storytelling"],
         "type":"media",
         "time":"Fall 2021",
         "image":"assets/thumbnails/universe-memorial.webp"
@@ -76,6 +84,7 @@
         "title":"Intent Prism",
         "subtitle":"LLM Powered Intent Based Interface for Information Forging",
         "showcases":[],
+        "tags":["LLM","Human Computer Inteaction","System Design"],
         "type":"research",
         "time":"Summer 2025",
         "image":"assets/thumbnails/intent-prism.webp",
@@ -86,6 +95,7 @@
         "title":"LLM Steering with Limited Reference",
         "subtitle":"Research on Steering LLMs with limited reference examples",
         "showcases":[],
+        "tags":["LLM","Human Computer Inteaction"],
         "type":"research",
         "time":"Fall 2024",
         "image":"assets/thumbnails/llm-steering-with-limited-reference.webp",
@@ -96,6 +106,7 @@
         "title":"LeCamera",
         "subtitle":"Dynamic Human Tracking with Low Cost Robotics Arms",
         "showcases":[],
+        "tags":["Computer Vision","Robotics"],
         "type":"research",
         "time":"Fall 2025",
         "image":"assets/thumbnails/lecamera.webp",
@@ -106,6 +117,7 @@
         "title":"Tour Planning via Reinforcement Learning",
         "subtitle":"Next Action Prediction in Disney World",
         "showcases":[],
+        "tags":["Reinforcement Learning","System Design"],
         "type":"research",
         "time":"Spring 2023",
         "image":"assets/thumbnails/tour-planning-via-reinforcement-learning.webp",

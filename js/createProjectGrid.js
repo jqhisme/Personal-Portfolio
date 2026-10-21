@@ -16,6 +16,9 @@ function createProjectGrid(projects) {
                 <img src="${project.image}" alt="${project.title}">
                 <div class="project-overlay">
                     <p class="project-subtitle">${project.subtitle}</p>
+                    <div class="project-labels-table">
+                        ${project.tags.map(tag => `<span class="project-label">${tag}</span>`).join('')}
+                    </div>
                 </div>
             </div>
             <div class="project-card-footer">
@@ -29,34 +32,39 @@ function createProjectGrid(projects) {
     return grid;
 }
 
-function createProjectGridWithFilters(projects, filter_name) {
-    const grid = document.createElement('div');
-    grid.className = 'project-grid';
+// function createProjectGridWithFilters(projects, filter_name) {
+//     const grid = document.createElement('div');
+//     grid.className = 'project-grid';
 
-    // TODO:
-    // right now it is uusing filter_name == type
-    // in the future, a project may have multiple tags
-    // we then need to check if filter_name is in project.tags
-    const filteredProjects = filter_name === 'All' ? projects : projects.filter(p => p.type === filter_name.toLowerCase());
-    filteredProjects.forEach(project => {
-        const card = document.createElement('div');
-        card.className = 'project-card';
-        const slug = project.title.toLowerCase().replace(/ /g, '-');
-        card.innerHTML = `
-        <a href="/projects/${slug}.html" class="project-card-link">
-            <div class="project-image-wrapper">
-                <img src="${project.image}" alt="${project.title}">
-                <div class="project-overlay">
-                    <p class="project-subtitle">${project.subtitle}</p>
-                </div>
-            </div>
-            <h3>${project.title}</h3>
-        </a>
-        `;
-        grid.appendChild(card);
-    });
-    return grid;
-}
+//     // TODO:
+//     // right now it is uusing filter_name == type
+//     // in the future, a project may have multiple tags
+//     // we then need to check if filter_name is in project.tags
+//     const filteredProjects = filter_name === 'All' ? projects : projects.filter(p => p.type === filter_name.toLowerCase());
+//     filteredProjects.forEach(project => {
+//         const card = document.createElement('div');
+//         card.className = 'project-card';
+//         const slug = project.title.toLowerCase().replace(/ /g, '-');
+//         card.innerHTML = `
+//         <a href="/projects/${slug}.html" class="project-card-link">
+//             <div class="project-image-wrapper">
+//                 <img src="${project.image}" alt="${project.title}">
+//                 <div class="project-overlay">
+//                     <div class = "project-subtitle-wrapper">
+//                         <p class="project-subtitle">${project.subtitle}</p>
+//                     </div>
+//                     <div class = "project-label-wrapper">
+//                         <p class="project-labels">${project.tags.join('\n')}</p>
+//                     </div>
+//                 </div>
+//             </div>
+//             <h3>${project.title}</h3>
+//         </a>
+//         `;
+//         grid.appendChild(card);
+//     });
+//     return grid;
+// }
 
 function readProjectsFromJSON(){
     const jsonPath = 'assets/projects.json';

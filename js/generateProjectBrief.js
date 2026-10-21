@@ -1,4 +1,4 @@
-async function generateProjectBrief(projectName, shortBrief, awards,tools, labels, roles, credits){
+async function generateProjectBrief(projectName, shortBrief, awards,tools, roles, credits){
     const response = await fetch('/assets/projects.json');
     const projects = await response.json();
 
@@ -13,6 +13,7 @@ async function generateProjectBrief(projectName, shortBrief, awards,tools, label
                 showcases: project.showcases,
                 type: project.type,
                 time: project.time,
+                labels: project.tags
             };
             break;
         }
@@ -24,7 +25,6 @@ async function generateProjectBrief(projectName, shortBrief, awards,tools, label
     }
 
     thisProject.tools = tools;
-    thisProject.labels = labels;
     thisProject.roles = roles;
     thisProject.credits = credits;
     thisProject.shortBrief = shortBrief;
