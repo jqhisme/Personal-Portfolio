@@ -15,10 +15,10 @@ function createProjectGrid(projects) {
             <div class="project-image-wrapper">
                 <img src="${project.image}" alt="${project.title}">
                 <div class="project-overlay">
-                    <p class="project-subtitle">${project.subtitle}</p>
                     <div class="project-labels-table">
                         ${project.tags.map(tag => `<span class="project-label">${tag}</span>`).join('')}
                     </div>
+                    <p class="project-subtitle">${project.subtitle}</p>
                 </div>
             </div>
             <div class="project-card-footer">

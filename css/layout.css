@@ -56,10 +56,10 @@
   background: rgba(0, 0, 0, 0.5);  /* 50% dim */
   opacity: 0;
   transition: opacity 0.3s ease;
-  display: grid;
-  grid-template-columns: minmax(0, 7fr) minmax(0, 3fr);
-  align-items: end;
-  gap: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
   padding: 15px;
   box-sizing: border-box;
 }
@@ -79,18 +79,18 @@
 }
 
 .project-label {
-  color: #888;
+  color: rgb(214, 212, 212);
   font-size: 0.8rem;
-  line-height: 1.4;
+  line-height: 1.25;
   margin: 0;
-  text-align: right;
+  text-align: left;
 }
 
 .project-labels-table {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 0.25rem;
-  justify-content: right;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.1rem;
+  justify-items: start;
 }
 
 
