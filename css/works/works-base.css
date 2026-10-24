@@ -91,12 +91,21 @@
 }
 
 /* ── Call-out sentences ── */
-.call-out {
+.call-out-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em 1.5em;
+    padding: 1rem 1rem;
+}
+.content-container .call-out-container p {
+    margin: 0;
+    text-align: center;
     font-size: 1.25rem;
     font-weight: 400;
     font-style: italic;
-    margin: 2em 0;
 }
+
 
 .content-container p.small-heading{
     font-weight: 600;
@@ -193,3 +202,10 @@ a {
 a:hover {
   opacity: 0.4; 
 } 
+
+/* embedded website */
+.website-embed {
+    width: 100%;
+    height: 600px;
+    border: none;
+}
